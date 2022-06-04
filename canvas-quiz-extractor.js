@@ -44,7 +44,7 @@ function extractKeyTextFromProblem(problem) {
   return {
     questionText: question.textContent,
     selectedAnswerText: selectedAnswer.textContent,
-    correctAnswerText: (correctAnswer && correctAnswer.textContent) || "", // if correct answer element exists, return its text content; otherwise, return a blank string
+    correctAnswerText: (correctAnswer ? correctAnswer.textContent : ""), // if correct answer element exists, return its text content; otherwise, return a blank string
   };
 }
 
