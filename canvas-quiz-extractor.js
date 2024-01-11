@@ -59,7 +59,7 @@ function stringFromProblemText(questionText, answerText) {
   let aText = answerText;
 
   qText = qText.trim(); // remove leading and trailing whitespace
-  qText = qText.replaceAll(/(?<!_)(_{1,2}|_{4,})(?!_)/g, '___'); // change all underscore sequences to have a length of three
+  qText = qText.replaceAll(/_+/g, '___'); // change all underscore sequences to have a length of three
 
   aText = aText.trim(); // remove leading and trailing whitespace
   aText = aText[0].toUpperCase() + aText.slice(1); // capitalize the first letter of the answer text
