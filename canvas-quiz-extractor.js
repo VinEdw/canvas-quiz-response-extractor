@@ -60,6 +60,7 @@ function stringFromProblemText(questionText, answerText) {
 
   qText = qText.trim(); // remove leading and trailing whitespace
   qText = qText.replaceAll(/_+/g, '___'); // change all underscore sequences to have a length of three
+  qText = qText.replaceAll(/\s+/g, " "); // turn all whitespace sequences and newlines into a single space
 
   aText = aText.trim(); // remove leading and trailing whitespace
   aText = aText[0].toUpperCase() + aText.slice(1); // capitalize the first letter of the answer text
