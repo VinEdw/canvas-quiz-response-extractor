@@ -43,7 +43,7 @@ function extractKeyTextFromProblem(problem) {
   const correctAnswer = problem.querySelector("div.correct_answer div.answer_text")
   return {
     questionText: question.textContent,
-    selectedAnswerText: selectedAnswer.textContent,
+    selectedAnswerText: (selectedAnswer ? selectedAnswer.textContent : ""),
     correctAnswerText: (correctAnswer ? correctAnswer.textContent : ""), // if correct answer element exists, return its text content; otherwise, return a blank string
   };
 }
